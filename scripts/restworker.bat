@@ -1,0 +1,1 @@
+ng build ngx-restworker & exit

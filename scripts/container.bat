@@ -1,0 +1,1 @@
+ng build ngx-container & exit

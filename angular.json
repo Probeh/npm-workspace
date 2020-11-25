@@ -1,0 +1,479 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "defaultProject": "npm-workspace",
+  "newProjectRoot": "projects",
+  "projects": {
+    "ngx-container": {
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ngx-container/tsconfig.lib.prod.json"
+            }
+          },
+          "options": {
+            "project": "projects/ngx-container/ng-package.json",
+            "tsConfig": "projects/ngx-container/tsconfig.lib.json"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "exclude": ["**/node_modules/**"],
+            "tsConfig": [
+              "projects/ngx-container/tsconfig.lib.json",
+              "projects/ngx-container/tsconfig.spec.json"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "karmaConfig": "projects/ngx-container/karma.conf.js",
+            "main": "projects/ngx-container/src/test.ts",
+            "tsConfig": "projects/ngx-container/tsconfig.spec.json"
+          }
+        }
+      },
+      "prefix": "ngx",
+      "projectType": "library",
+      "root": "projects/ngx-container",
+      "schematics": {
+        "@schematics/angular:component": {
+          "export": false,
+          "skipImport": true,
+          "skipTests": true,
+          "style": "scss"
+        },
+        "@schematics/angular:directive": {
+          "export": false,
+          "skipImport": true,
+          "skipTests": true
+        },
+        "@schematics/angular:module": {
+          "commonModule": true,
+          "routing": true,
+          "routingScope": "Child",
+          "skipTests": true
+        },
+        "@schematics/angular:pipe": {
+          "skipTests": true
+        },
+        "@schematics/angular:service": {
+          "skipTests": true
+        }
+      },
+      "sourceRoot": "projects/ngx-container/src"
+    },
+    "ngx-localstorage": {
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ngx-localstorage/tsconfig.lib.prod.json"
+            }
+          },
+          "options": {
+            "project": "projects/ngx-localstorage/ng-package.json",
+            "tsConfig": "projects/ngx-localstorage/tsconfig.lib.json"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "exclude": ["**/node_modules/**"],
+            "tsConfig": [
+              "projects/ngx-localstorage/tsconfig.lib.json",
+              "projects/ngx-localstorage/tsconfig.spec.json"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "karmaConfig": "projects/ngx-localstorage/karma.conf.js",
+            "main": "projects/ngx-localstorage/src/test.ts",
+            "tsConfig": "projects/ngx-localstorage/tsconfig.spec.json"
+          }
+        }
+      },
+      "prefix": "ngx",
+      "projectType": "library",
+      "root": "projects/ngx-localstorage",
+      "schematics": {
+        "@schematics/angular:component": {
+          "export": false,
+          "skipImport": true,
+          "skipTests": true,
+          "style": "scss"
+        },
+        "@schematics/angular:directive": {
+          "export": false,
+          "skipImport": true,
+          "skipTests": true
+        },
+        "@schematics/angular:module": {
+          "commonModule": true,
+          "routing": true,
+          "routingScope": "Child",
+          "skipTests": true
+        },
+        "@schematics/angular:pipe": {
+          "skipTests": true
+        },
+        "@schematics/angular:service": {
+          "skipTests": true
+        }
+      },
+      "sourceRoot": "projects/ngx-localstorage/src"
+    },
+    "ngx-monitor": {
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ngx-monitor/tsconfig.lib.prod.json"
+            }
+          },
+          "options": {
+            "project": "projects/ngx-monitor/ng-package.json",
+            "tsConfig": "projects/ngx-monitor/tsconfig.lib.json"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "exclude": ["**/node_modules/**"],
+            "tsConfig": [
+              "projects/ngx-monitor/tsconfig.lib.json",
+              "projects/ngx-monitor/tsconfig.spec.json"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "karmaConfig": "projects/ngx-monitor/karma.conf.js",
+            "main": "projects/ngx-monitor/src/test.ts",
+            "tsConfig": "projects/ngx-monitor/tsconfig.spec.json"
+          }
+        }
+      },
+      "prefix": "ngx",
+      "projectType": "library",
+      "root": "projects/ngx-monitor",
+      "schematics": {
+        "@schematics/angular:component": {
+          "export": false,
+          "skipImport": true,
+          "skipTests": true,
+          "style": "scss"
+        },
+        "@schematics/angular:directive": {
+          "export": false,
+          "skipImport": true,
+          "skipTests": true
+        },
+        "@schematics/angular:module": {
+          "commonModule": true,
+          "routing": true,
+          "routingScope": "Child",
+          "skipTests": true
+        },
+        "@schematics/angular:pipe": {
+          "skipTests": true
+        },
+        "@schematics/angular:service": {
+          "skipTests": true
+        }
+      },
+      "sourceRoot": "projects/ngx-monitor/src"
+    },
+    "ngx-restworker": {
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ngx-restworker/tsconfig.lib.prod.json"
+            }
+          },
+          "options": {
+            "project": "projects/ngx-restworker/ng-package.json",
+            "tsConfig": "projects/ngx-restworker/tsconfig.lib.json"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "exclude": ["**/node_modules/**"],
+            "tsConfig": [
+              "projects/ngx-restworker/tsconfig.lib.json",
+              "projects/ngx-restworker/tsconfig.spec.json"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "karmaConfig": "projects/ngx-restworker/karma.conf.js",
+            "main": "projects/ngx-restworker/src/test.ts",
+            "tsConfig": "projects/ngx-restworker/tsconfig.spec.json"
+          }
+        }
+      },
+      "prefix": "lib",
+      "projectType": "library",
+      "root": "projects/ngx-restworker",
+      "schematics": {
+        "@schematics/angular:component": {
+          "export": false,
+          "skipImport": true,
+          "skipTests": true,
+          "style": "scss"
+        },
+        "@schematics/angular:directive": {
+          "export": false,
+          "skipImport": true,
+          "skipTests": true
+        },
+        "@schematics/angular:module": {
+          "commonModule": true,
+          "routing": true,
+          "routingScope": "Child",
+          "skipTests": true
+        },
+        "@schematics/angular:pipe": {
+          "skipTests": true
+        },
+        "@schematics/angular:service": {
+          "skipTests": true
+        }
+      },
+      "sourceRoot": "projects/ngx-restworker/src"
+    },
+    "ngx-sourcemap": {
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ngx-sourcemap/tsconfig.lib.prod.json"
+            }
+          },
+          "options": {
+            "project": "projects/ngx-sourcemap/ng-package.json",
+            "tsConfig": "projects/ngx-sourcemap/tsconfig.lib.json"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "exclude": ["**/node_modules/**"],
+            "tsConfig": [
+              "projects/ngx-sourcemap/tsconfig.lib.json",
+              "projects/ngx-sourcemap/tsconfig.spec.json"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "karmaConfig": "projects/ngx-sourcemap/karma.conf.js",
+            "main": "projects/ngx-sourcemap/src/test.ts",
+            "tsConfig": "projects/ngx-sourcemap/tsconfig.spec.json"
+          }
+        }
+      },
+      "prefix": "ngx",
+      "projectType": "library",
+      "root": "projects/ngx-sourcemap",
+      "schematics": {
+        "@schematics/angular:component": {
+          "export": false,
+          "skipImport": true,
+          "skipTests": true,
+          "style": "scss"
+        },
+        "@schematics/angular:directive": {
+          "export": false,
+          "skipImport": true,
+          "skipTests": true
+        },
+        "@schematics/angular:module": {
+          "commonModule": true,
+          "routing": true,
+          "routingScope": "Child",
+          "skipTests": true
+        },
+        "@schematics/angular:pipe": {
+          "skipTests": true
+        },
+        "@schematics/angular:service": {
+          "skipTests": true
+        }
+      },
+      "sourceRoot": "projects/ngx-sourcemap/src"
+    },
+    "npm-workspace": {
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "maximumError": "5mb",
+                  "maximumWarning": "2mb",
+                  "type": "initial"
+                },
+                {
+                  "maximumError": "10kb",
+                  "maximumWarning": "6kb",
+                  "type": "anyComponentStyle"
+                }
+              ],
+              "buildOptimizer": true,
+              "extractLicenses": true,
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
+              "namedChunks": false,
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "vendorChunk": false
+            }
+          },
+          "options": {
+            "aot": true,
+            "assets": ["src/favicon.ico", "src/assets"],
+            "commonChunk": true,
+            "index": "src/index.html",
+            "main": "src/main.ts",
+            "namedChunks": true,
+            "outputPath": "dist/default",
+            "polyfills": "src/polyfills.ts",
+            "scripts": [],
+            "styles": ["src/styles.scss"],
+            "tsConfig": "tsconfig.app.json",
+            "vendorChunk": true
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "configurations": {
+            "production": {
+              "devServerTarget": "npm-workspace:serve:production"
+            }
+          },
+          "options": {
+            "devServerTarget": "npm-workspace:serve",
+            "protractorConfig": "e2e/protractor.conf.js"
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "npm-workspace:build"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "exclude": ["**/node_modules/**"],
+            "tsConfig": [
+              "tsconfig.app.json",
+              "tsconfig.spec.json",
+              "e2e/tsconfig.json"
+            ]
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "browserTarget": "npm-workspace:build:production"
+            }
+          },
+          "options": {
+            "browserTarget": "npm-workspace:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "assets": ["src/favicon.ico", "src/assets"],
+            "karmaConfig": "karma.conf.js",
+            "main": "src/test.ts",
+            "polyfills": "src/polyfills.ts",
+            "scripts": [],
+            "styles": ["src/styles.scss"],
+            "tsConfig": "tsconfig.spec.json"
+          }
+        }
+      },
+      "prefix": "app",
+      "projectType": "application",
+      "root": "",
+      "schematics": {
+        "@schematics/angular:component": {
+          "export": false,
+          "skipImport": true,
+          "skipTests": true,
+          "style": "scss"
+        },
+        "@schematics/angular:directive": {
+          "export": false,
+          "skipImport": true,
+          "skipTests": true
+        },
+        "@schematics/angular:module": {
+          "commonModule": true,
+          "routing": true,
+          "routingScope": "Child",
+          "skipTests": true
+        },
+        "@schematics/angular:pipe": {
+          "skipTests": true
+        },
+        "@schematics/angular:service": {
+          "skipTests": true
+        }
+      },
+      "sourceRoot": "src"
+    }
+  },
+  "schematics": {
+    "@schematics/angular:component": {
+      "export": false,
+      "skipImport": true,
+      "skipTests": true,
+      "style": "scss"
+    },
+    "@schematics/angular:directive": {
+      "export": false,
+      "skipImport": true,
+      "skipTests": true
+    },
+    "@schematics/angular:module": {
+      "commonModule": true,
+      "routing": true,
+      "routingScope": "Child",
+      "skipTests": true
+    },
+    "@schematics/angular:pipe": {
+      "skipTests": true
+    },
+    "@schematics/angular:service": {
+      "skipTests": true
+    }
+  },
+  "version": 1
+}

@@ -1,0 +1,1 @@
+compodoc -p tsconfig.json -d docs -n Documentation src --hideGenerator --theme stripe
